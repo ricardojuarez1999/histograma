@@ -1,10 +1,10 @@
-number = getElementById("number");
-btnAdd = getElementById("agregar");
-btnHist = getElementById("hist");
+btnAdd = document.getElementById("agregar");
+btnHist = document.getElementById("hist");
+numeros = document.getElementById("numeros");
 
-function runScript(e) {
-    if (e.keyCode == 13) {
-        var tb = document.getElementById("scriptBox");
-        eval(tb.value);
-        return false;
-    }
+number.onkeyup = function(e){
+	if(e.which == 13) {
+		lista.push(number.value);
+		number.value = "";
+	}
+}
